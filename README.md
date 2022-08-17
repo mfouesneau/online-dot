@@ -32,7 +32,7 @@ options:
 
 - generate a "Hello World" graph
 ```shell
-echo "digraph G {Hello->World}" | dot.py -Tpng > hello.png
+echo "digraph G {Hello->World}" | dot -Tpng > hello.png
 ```
 
 - using in python with `python-graphviz`
