@@ -8,10 +8,10 @@ diagrams. All you need to do is to set this file on the system path.
 
 This is based on [graphviz.glitch.me](https://graphviz.glitch.me) by @olragon.
 
-Command line arguments
+## Command line arguments
 
 ```
-usage: __main__.py [-h] [-K K] [-T T] [-o OUTPUT] [-O O] [-u] [-V] [instructions ...]
+usage: dot [-h] [-K K] [-T T] [-o OUTPUT] [-O O] [-u] [-V] [instructions ...]
 
 A simplified `dot` comment for directed graphs using `https://graphviz.glitch.me/` online graphviz service
 
@@ -35,13 +35,11 @@ options:
 echo "digraph G {Hello->World}" | dot.py -Tpng > hello.png
 ```
 
-
-- set path to use with python-graphviz (use first argument to replace local dot command)
+- using in python with `python-graphviz`
 ```python
-from onlinedot import add_to_path
-add_to_path(first=False)
 import graphviz
 print(graphviz.backend.version())
 ```
-The latter should return something like
+If this package is used, the latter should return something like
 ```dot - graphviz version 1.00.0 (graphviz.glitch.me)```
+(Note that if you have graphviz installed in your system, it will be used.)
