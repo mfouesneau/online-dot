@@ -1,3 +1,6 @@
+""" Adding basic tests """
+
+
 def test_basic_run():
     """
     Basic hello world diagram
