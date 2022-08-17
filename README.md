@@ -1,5 +1,5 @@
 # online-dot
-A dot command line replacement wrapping graphviz.glitch.me online service 
+A dot command line replacement wrapping graphviz.glitch.me online service
 
 
 It is sometimes difficult or expensive to install graphviz libraries. This small
@@ -12,7 +12,7 @@ This is based on [graphviz.glitch.me](https://graphviz.glitch.me) by @olragon.
 
 - generate the snakemake graph of the current directory
 ```shell
-snakemake --dag 2> /dev/null | ./dot.py -Tsvg -O test
+echo "digraph G {Hello->World}" | dot.py -Tpng > hello.png
 ```
 
 - set path to use with python-graphviz (use first argument to replace local dot command)
