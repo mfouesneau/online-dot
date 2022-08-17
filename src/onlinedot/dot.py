@@ -19,6 +19,7 @@ import requests
 
 __version__ = "dot - graphviz version 1.00.0 (graphviz.glitch.me)"
 
+
 def add_to_path(first: bool = False):
     """ Add the location of this file to the environment PATH.
 
@@ -84,22 +85,39 @@ def main():
     import sys
 
     parser = argparse.ArgumentParser(
-        description="A simplified `dot` comment for directed graphs using `https://graphviz.glitch.me/` online graphviz service")
-    parser.add_argument('instructions', type=str, nargs='*',
-                        help='dot script')
-    parser.add_argument('-K', dest='K', default="dot",
-                        help="One of the 'dot', 'neato', 'fdp', 'twopi', 'circo' engine.")
-    parser.add_argument('-T', dest='T', default="svg",
-                        help="One of the 'svg', 'png', 'jpg' output file format")
-    parser.add_argument('-o', dest='output', default="",
+        description=
+        "A simplified `dot` comment for directed graphs using `https://graphviz.glitch.me/` online graphviz service"
+    )
+    parser.add_argument('instructions', type=str, nargs='*', help='dot script')
+    parser.add_argument(
+        '-K',
+        dest='K',
+        default="dot",
+        help="One of the 'dot', 'neato', 'fdp', 'twopi', 'circo' engine.")
+    parser.add_argument(
+        '-T',
+        dest='T',
+        default="svg",
+        help="One of the 'svg', 'png', 'jpg' output file format")
+    parser.add_argument('-o',
+                        dest='output',
+                        default="",
                         help="Output filename")
-    parser.add_argument('-O', dest='O', default="",
+    parser.add_argument('-O',
+                        dest='O',
+                        default="",
                         help="Output filename with automatic extension")
-    parser.add_argument('-u', '--url', dest='url', action="store_true", default=False,
+    parser.add_argument('-u',
+                        '--url',
+                        dest='url',
+                        action="store_true",
+                        default=False,
                         help="Output online url to graph")
-    parser.add_argument('-V', '--version', action="store_true", default=False,
+    parser.add_argument('-V',
+                        '--version',
+                        action="store_true",
+                        default=False,
                         help="Display version information")
-
 
     args = parser.parse_args()
 
@@ -119,7 +137,9 @@ def main():
     if args.output in [None, ""] or args.url:
         print(content)
     else:
-        if args.T.lower() in ["svg",]:
+        if args.T.lower() in [
+                "svg",
+        ]:
             mode = "w"
         else:
             mode = "wb"
@@ -127,6 +147,7 @@ def main():
             f.write(content)
 
     sys.exit(0)
+
 
 if __name__ == "__main__":
     main()
