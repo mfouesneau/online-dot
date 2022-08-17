@@ -78,8 +78,10 @@ def dot(graph: str,
     except UnicodeDecodeError:
         return content
 
-if __name__ == "__main__":
+
+def main():
     import argparse
+    import sys
 
     parser = argparse.ArgumentParser(
         description="A simplified `dot` comment for directed graphs using `https://graphviz.glitch.me/` online graphviz service")
@@ -125,3 +127,6 @@ if __name__ == "__main__":
             f.write(content)
 
     sys.exit(0)
+
+if __name__ == "__main__":
+    main()

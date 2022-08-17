@@ -1,1 +1,1 @@
-from .dot import (dot, __version__, add_to_path)
+from .dot import (dot, __version__, main, add_to_path)
