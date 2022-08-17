@@ -1,10 +1,10 @@
 # onlinedot
 A dot command line replacement wrapping graphviz.glitch.me online service
 
-
 It is sometimes difficult or expensive to install graphviz libraries. This small
 tool offers a replacement that can be used with python-graphviz to generate
-diagrams. All you need to do is to set this file on the system path.
+diagrams. All you need to do is to install this package which will provide you
+with a `dot` command line tool.
 
 This is based on [graphviz.glitch.me](https://graphviz.glitch.me) by @olragon.
 
