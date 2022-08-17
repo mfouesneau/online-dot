@@ -17,7 +17,7 @@ echo "digraph G {Hello->World}" | dot.py -Tpng > hello.png
 
 - set path to use with python-graphviz (use first argument to replace local dot command)
 ```python
-from online-dot import add_to_path
+from onlinedot import add_to_path
 add_to_path(first=False)
 import graphviz
 print(graphviz.backend.version())
